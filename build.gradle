@@ -35,10 +35,6 @@ dependencies {
         exclude module: 'guava'
     }
 
-    shadow 'net.fabricmc:tiny-mappings-parser:0.3.0+build.17'
-    shadow 'net.fabricmc:tiny-remapper:0.8.2'
-    shadow 'net.fabricmc:access-widener:2.1.0'
-
     shadow "babric:fabric-loader:${project.loader_version}"
 
     shadow files('libs/bta.jar')
