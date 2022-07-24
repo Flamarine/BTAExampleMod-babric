@@ -12,7 +12,6 @@ jobs:
       matrix:
         # Use these Java versions
         java: [
-          8,     # Minimum supported by BTA
           11,
           17,    # Current Java LTS
         ]
