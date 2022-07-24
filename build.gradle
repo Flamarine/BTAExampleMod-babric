@@ -18,6 +18,14 @@ repositories {
         name = 'Fabric'
         url = 'https://maven.fabricmc.net/'
     }
+    ivy {
+        url = "https://github.com/Joe4422"
+        patternLayout {
+            artifact("[organisation]/releases/download/v[revision]/[module].jar")
+            m2compatible = true
+        }
+        metadataSources { artifact() }
+    }
 }
 
 // We use shadow here to avoid the following dependencies being shadowed.
@@ -37,7 +45,7 @@ dependencies {
 
     shadow "babric:fabric-loader:${project.loader_version}"
 
-    shadow files('libs/bta.jar')
+    shadow "test-upload-repo-bta:bta:${project.bta_version}"
 
     shadow "org.slf4j:slf4j-api:1.8.0-beta4"
     shadow 'org.apache.logging.log4j:log4j-slf4j18-impl:2.17.2'
